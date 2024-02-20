@@ -29,7 +29,7 @@ const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 				</Link>
 			</div>
 			<Link href={`/product/${product.slug}`}>
-				<h3 className='mt-2 font-semibold'>{product.name}</h3>
+				<h3 className='mt-2 font-semibold h-[80px]'>{product.name}</h3>
 			</Link>
 			<Link
 				href={`/category/${product.category.slug}`}

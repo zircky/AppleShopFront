@@ -41,7 +41,7 @@ export default function RootLayout({ children }: PropsWithChildren<unknown>) {
 		<html lang='en' className={golos.variable}>
 			<body>
 				<Providers>
-					<div className='bg-secondary'>
+					<div className='bg-gradient-to-r from-secondary via-black to-granite'>
 						<Header />
 						<div
 							className='grid'

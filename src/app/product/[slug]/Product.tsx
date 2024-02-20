@@ -12,6 +12,7 @@ import SimilarProducts from './SimilarProducts'
 import ProductInformation from './product-information/ProductInformation'
 import ProductReviews from './product-reviews/ProductReviews'
 import { ProductService } from '@/services/product/product.service'
+import Visible from '@/app/product/[slug]/Visible'
 
 interface IProductPage {
 	initialProduct: IProduct
@@ -44,11 +45,11 @@ export default function Product({
 				}}
 			>
 				<ProductGallery images={product.images} />
-				<div className='opacity-80 font-light'>
-					<div className='font-semibold mb-1'>Description:</div>
-					{product.description}
-				</div>
 				<ProductInformation product={product} />
+			</div>
+			<div className='opacity-80 font-light'>
+				<div className='font-semibold mb-1'>Description:</div>
+				<Visible description={product.description} />
 			</div>
 			<SimilarProducts similarProducts={similarProducts} />
 			<ProductReviews reviews={product.reviews} productId={product.id} />

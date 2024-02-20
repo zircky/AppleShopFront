@@ -12,6 +12,7 @@ import { useIsAdminPanel } from '@/hooks/useIsAdminPanel'
 import HeaderProfile from './HeaderProfile'
 import Search from './Search'
 import HeaderCart from './cart/HeaderCart'
+import { IoLogIn } from 'react-icons/io5'
 
 const Header: FC = () => {
 	const { isAdminPanel } = useIsAdminPanel()
@@ -19,7 +20,7 @@ const Header: FC = () => {
 
 	return (
 		<header
-			className='bg-secondary w-full py-4 px-4 grid'
+			className='bg-gradient-to-r from-secondary from-15% via-black  to-granite w-full py-4 px-4 grid'
 			style={{
 				gridTemplateColumns: '1fr 3fr 1.2fr'
 			}}
@@ -51,7 +52,12 @@ const Header: FC = () => {
 					<AiOutlineHeart size={28} />
 				</Link>
 				<HeaderCart />
-				<HeaderProfile />
+				{user ? (<HeaderProfile />): (
+					<Link href='/auth'>
+					<IoLogIn size={35} color={"FFFFFF"}/>
+				</Link>)}
+
+
 			</div>
 		</header>
 	)
