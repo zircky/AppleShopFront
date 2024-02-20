@@ -1,0 +1,16 @@
+.item {
+	@apply mt-4 flex items-center justify-between rounded-lg bg-white px-5 transition-colors hover:bg-opacity-50;
+
+	> div {
+		@apply py-4;
+		width: 24%;
+
+		&:last-child {
+			@apply justify-end text-right;
+		}
+	}
+}
+
+.notFound {
+	@apply py-4 text-center text-lg;
+}

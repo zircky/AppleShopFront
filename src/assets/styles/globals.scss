@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply overflow-x-hidden bg-bg-color text-base text-black;
+	font-family: var(--font-golos), sans-serif;
+}
+
+.disabled {
+	pointer-events: none;
+	cursor: default;
+	text-decoration: none;
+	opacity: 0.2 !important;
+}
+
+.btn {
+	@apply rounded-xl px-10 py-2 font-medium shadow transition duration-300 ease-in-out;
+
+	&:not(&:disabled) {
+		@apply hover:shadow-lg;
+	}
+
+	&.btn-white {
+		@apply bg-white text-primary;
+	}
+
+	&.btn-orange {
+		@apply bg-primary text-white;
+	}
+
+	&.btn-large {
+		@apply px-12 py-4 text-xl;
+	}
+}

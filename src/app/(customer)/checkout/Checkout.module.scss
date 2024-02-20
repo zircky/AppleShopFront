@@ -1,0 +1,52 @@
+.checkout {
+	@apply grid gap-20;
+	grid-template-columns: 2fr 1.2fr;
+
+	.list {
+		.item {
+			@apply mb-4 flex items-center rounded-lg bg-white px-6 py-3 pr-10;
+
+			.row {
+				@apply flex w-full items-center justify-between;
+
+				.information {
+					@apply ml-6;
+
+					> div {
+						&:first-child {
+							@apply text-lg font-semibold;
+						}
+
+						&:last-child {
+							@apply text-sm opacity-40;
+						}
+					}
+				}
+
+				.price {
+					@apply text-lg;
+				}
+			}
+		}
+	}
+
+	.footer {
+		@apply mt-20 flex items-center justify-end gap-10;
+
+		.total {
+			> div {
+				&:first-child {
+					@apply text-sm opacity-40;
+				}
+
+				&:last-child {
+					@apply text-2xl font-semibold;
+				}
+			}
+		}
+	}
+
+	.recommended {
+		@apply grid grid-cols-2 gap-10;
+	}
+}

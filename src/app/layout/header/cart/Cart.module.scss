@@ -1,0 +1,44 @@
+.cartWrapper {
+	@apply absolute -left-[12.5rem] top-[4.2rem] z-20 w-80 rounded-xl bg-secondary px-6 py-4 text-sm text-white;
+	animation: 0.7s cartAnimation ease-in-out;
+}
+
+.cart {
+	@apply mb-10;
+
+	.item {
+		@apply flex items-center gap-4 border-b border-b-black/30 pb-6 pt-4;
+
+		.name {
+			@apply w-36 truncate font-semibold tracking-widest;
+		}
+
+		.price {
+			@apply mt-1 text-sm text-white;
+		}
+
+		.variation {
+			@apply text-xs text-white opacity-70;
+		}
+	}
+}
+
+.footer {
+	> div:first-child {
+		@apply text-sm text-white;
+	}
+
+	> div:last-child {
+		@apply text-xl font-semibold;
+	}
+}
+
+@keyframes cartAnimation {
+	from {
+		transform: translateX(110%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
