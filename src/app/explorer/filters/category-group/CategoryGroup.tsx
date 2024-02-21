@@ -35,7 +35,9 @@ const CategoryGroup: FC = () => {
 						</Checkbox>
 					)
 				})
-			) : (
+			)
+
+				: (
 				<p>Categories not found!</p>
 			)}
 		</FilterWrapper>

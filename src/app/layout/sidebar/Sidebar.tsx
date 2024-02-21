@@ -37,7 +37,7 @@ const Sidebar: FC = () => {
 				) : data ? (
 					<>
 						<div className='text-xl text-white mt-4 mb-6 ml-6'>
-							{isAdminPanel ? 'Menu: ' : 'Categories: '}👇
+							{isAdminPanel ? 'Menu: ' : 'Categories: '}
 						</div>
 						<ul>
 							{(isAdminPanel ? ADMIN_MENU : convertToMenuItems(data)).map(

@@ -64,7 +64,7 @@ const ProductExplorer: FC<IProductExplorer> = ({ initialProducts }) => {
 				</aside>
 
 				<section>
-					<Catalog products={data.products} isLoading={isFetching} />
+					<Catalog products={data.products} isLoading={isFetching} isFilterOpen={isFilterOpen} />
 					<Pagination
 						changePage={page => updateQueryParams('page', page.toString())}
 						currentPage={queryParams.page}

@@ -13,9 +13,10 @@ interface ICatalog {
 	products: IProduct[]
 	isLoading?: boolean
 	title?: string
+	isFilterOpen?: boolean
 }
 
-const Catalog: FC<ICatalog> = ({ products, isLoading, title }) => {
+const Catalog: FC<ICatalog> = ({ products, isLoading, title, isFilterOpen }) => {
 	if (isLoading) return <Loader />
 
 	return (
@@ -25,7 +26,7 @@ const Catalog: FC<ICatalog> = ({ products, isLoading, title }) => {
 				<>
 					<div className='grid grid-cols-4 gap-10'>
 						{products.map(product => (
-							<ProductItem key={product.id} product={product} />
+							<ProductItem key={product.id} product={product} isFilterOpen={isFilterOpen}/>
 						))}
 					</div>
 				</>

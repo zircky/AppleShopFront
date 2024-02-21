@@ -9,8 +9,15 @@ import { convertPrice } from '@/utils/convertPrice'
 import AddToCartButton from './AddToCartButton'
 import FavoriteButton from './FavoriteButton'
 import ProductRating from './ProductRating'
+import styles from './ProductItem.module.scss'
+import cn from 'clsx'
 
-const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
+interface IFilter {
+	product: IProduct
+	isFilterOpen?: boolean
+}
+
+const ProductItem: FC<IFilter> = ({ product, isFilterOpen }) => {
 	return (
 		<div className='animate-scaleIn'>
 			<div className='bg-white rounded-xl relative overflow-hidden'>
@@ -29,7 +36,7 @@ const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 				</Link>
 			</div>
 			<Link href={`/product/${product.slug}`}>
-				<h3 className='mt-2 font-semibold h-[80px]'>{product.name}</h3>
+				<h3 className={cn(styles.text, {[styles.filterOpened]: isFilterOpen, [styles.filterClous]: !isFilterOpen})}>{product.name}</h3>
 			</Link>
 			<Link
 				href={`/category/${product.category.slug}`}
