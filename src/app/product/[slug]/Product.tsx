@@ -44,7 +44,7 @@ export default function Product({
 					gridTemplateColumns: '1fr 1fr 1fr'
 				}}
 			>
-				<ProductGallery images={product.images} />
+				<ProductGallery images={product.images.images} />
 				<ProductInformation product={product} />
 			</div>
 			<div className='opacity-80 font-light'>

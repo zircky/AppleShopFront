@@ -11,6 +11,7 @@ import FavoriteButton from './FavoriteButton'
 import ProductRating from './ProductRating'
 import styles from './ProductItem.module.scss'
 import cn from 'clsx'
+import { IImages } from '@/types/images.interface'
 
 interface IFilter {
 	product: IProduct
@@ -29,7 +30,7 @@ const ProductItem: FC<IFilter> = ({ product, isFilterOpen }) => {
 					<Image
 						width={306}
 						height={306}
-						src={product.images[0]}
+						src={product.images.images[0]}
 						alt={product.name}
 						className='block mx-auto'
 					/>

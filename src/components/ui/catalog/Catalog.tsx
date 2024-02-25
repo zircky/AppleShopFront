@@ -8,6 +8,7 @@ import Heading from '../Heading'
 import Loader from '../Loader'
 
 import ProductItem from './product-item/ProductItem'
+import { IImages } from '@/types/images.interface'
 
 interface ICatalog {
 	products: IProduct[]

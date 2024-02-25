@@ -42,6 +42,13 @@ export const ProductService = {
 		})
 	},
 
+	async getByImages(imagesSlug: string){
+		return axiosClassic<IProduct[]>({
+			url: `${PRODUCTS}/by-images/${imagesSlug}`,
+			method: 'GET'
+		})
+	},
+
 	async getById(id: string | number) {
 		return instance<IProduct>({
 			url: `${PRODUCTS}/${id}`,
