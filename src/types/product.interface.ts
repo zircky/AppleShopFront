@@ -12,6 +12,12 @@ export interface IProduct {
 	images: IImages
 	createdAt: string
 	category: ICategory
+	storage: string
+	screen: string
+	photo: string
+	processor: string
+	operatingSystem: string
+	displayRefreshRate: string
 }
 
 export interface IProductDetails {
@@ -25,4 +31,8 @@ export type TypeProducts = {
 export type TypePaginationProducts = {
 	length: number
 	products: IProduct[]
+}
+
+export type TypeProductCharacterisation = {
+
 }

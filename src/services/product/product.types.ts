@@ -18,6 +18,11 @@ export type TypeProductDataFilters = {
 	maxPrice?: string
 	categoryId?: string
 	storage?:string
+	screen?: string
+	photo?: string
+	processor?: string
+	operatingSystem?: string
+	displayRefreshRate?: string
 }
 
 export enum EnumProductSort {

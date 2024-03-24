@@ -13,6 +13,7 @@ import ProductInformation from './product-information/ProductInformation'
 import ProductReviews from './product-reviews/ProductReviews'
 import { ProductService } from '@/services/product/product.service'
 import Visible from '@/app/product/[slug]/Visible'
+import ProductCharacterisation from '@/app/product/[slug]/product-characterisation/ProductCharacterisation'
 
 interface IProductPage {
 	initialProduct: IProduct
@@ -45,6 +46,7 @@ export default function Product({
 				}}
 			>
 				<ProductGallery images={product.images.images} />
+				<ProductCharacterisation product={product}/>
 				<ProductInformation product={product} />
 			</div>
 			<div className='opacity-80 font-light'>
