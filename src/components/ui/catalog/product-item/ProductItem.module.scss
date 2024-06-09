@@ -1,0 +1,11 @@
+.text {
+  @apply mt-2 font-semibold;
+
+  &.filterOpened {
+    @apply h-[108px];
+  }
+
+  &.filterClous {
+    @apply h-[80px];
+  }
+}
