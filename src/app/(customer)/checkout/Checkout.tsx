@@ -13,10 +13,10 @@ import { useCart } from '@/hooks/useCart'
 
 import { IProduct } from '@/types/product.interface'
 
-import { convertPrice } from '@/utils/covertPrice'
+import { convertPrice } from '@/utils/convertPrice'
 
-import CheckoutItem from './CeckoutItem'
-import styles from './Checkout.odule.scss'
+import CheckoutItem from './CheckoutItem'
+import styles from './Checkout.module.scss'
 import { OrderService } from '@/services/order.service'
 
 
